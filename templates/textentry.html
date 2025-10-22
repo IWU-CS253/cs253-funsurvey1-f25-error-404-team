@@ -1,13 +1,13 @@
 {% extends "layout.html" %}
 {% block body %}
-<div class =pt-3>
-<h1 class="title">{{ title }}</h1>
+<div class= "pt-3 mb-4">
+<h1 class="display-5 fw-bold text-primary">{{ title }}</h1>
 <h2 class="subtitle">Question</h2>
 Question: {{ qtext }}
 
-<div class = "chart">
-<h2 class="subtitle">Chart</h2>
-<img src="{{ chart }}" alt="Count Plot {{ title }}">
+<div class = "card p-3 mb-4 text-center">
+<h2 class="text-warning mb-2">Chart</h2>
+<img src="{{ chart }}" alt="Count Plot {{ title }}" class="img-fluid rounded">
 </div>
 </div>
 
