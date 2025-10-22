@@ -1,4 +1,4 @@
 .venv
 .idea
-.cs253-venv
+cs253-venv/
 __pycache__/
