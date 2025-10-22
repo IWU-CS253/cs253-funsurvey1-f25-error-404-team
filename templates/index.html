@@ -1,19 +1,28 @@
 {% extends "layout.html" %}
 {% block body %}
-        <h2 style="color : red;">Survey Data</h2>
+        <h2 class="text-primary">Survey Data</h2>
         <ul class="navbar-nav">
-            <li class="nav-item"><b>You can take the survey <a href="https://docs.google.com/forms/d/e/1FAIpQLSfWw-znStt5iF2Dc7eIoXNn24Ulxhm9fEDVggtAxoAyXLfyIA/viewform">here</a>.</b></li>
-            <li class="nav-item"><b>Total responses submitted</b>: {{ responses }} </li>
-            <li class="nav-item"><b>Date/Time first response</b>: {{ first }}</li>
-            <li class="nav-item"><b>Date/Time most recent response</b>: {{ last }}</li>
+            <li class="nav-item mb-2 bg-light rounded p-2"> 
+                <b>You can take the survey <a class="link-success" href="https://docs.google.com/forms/d/e/1FAIpQLSfWw-znStt5iF2Dc7eIoXNn24Ulxhm9fEDVggtAxoAyXLfyIA/viewform">here</a>.</b> <!-- 🧷 added link-success for green link -->
+            </li>
+            <li class="nav-item mb-2 bg-light rounded p-2">
+                <b>Total responses submitted</b>: <span class="text-secondary">{{ responses }}</span>
+            </li>
+            <li class="nav-item mb-2 bg-light rounded p-2">
+                <b>Date/Time first response</b>: <span class="text-secondary">{{ first }}</span>
+            </li>
+            <li class="nav-item mb-2 bg-light rounded p-2">
+                <b>Date/Time most recent response</b>: <span class="text-secondary">{{ last }}</span>
         </ul>
 
-        <hr>
-        <h2 style="color : red;">Survey Questions</h2>
+        <hr class="border-secondary">
+        <h2 class="text-primary">Survey Questions</h2> 
         <ul class="navbar-nav">
         {% for key, value in label_dict.items() %}
             {%  if key != "Timestamp" %}
-                <li class="nav-item"><b>{{ key }}</b>: {{ value }}</li>
+                <li class="nav-item mb-2 bg-light rounded p-2">
+                    <b class="text-dark">{{ key }}</b>: <span class="text-muted">{{ value }}</span> 
+                </li>
             {%  endif %}
         {%  endfor %}
         </ul>
