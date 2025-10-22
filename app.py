@@ -289,3 +289,7 @@ def shoes():
                            title=col_label,
                            qtext=label_dict[col_label],
                            chart='data:image/png;base64,' + textcount_html(df, col_label))
+
+
+if __name__ == '__main__':
+    app.run()

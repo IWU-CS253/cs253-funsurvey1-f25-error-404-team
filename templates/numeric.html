@@ -1,22 +1,24 @@
 {% extends "layout.html" %}
 {% block body %}
-    <h1 class="title">{{ title }}</h1>
-    <h2 class="subtitle">Question</h2>
-    Question: {{ qtext }}
+<div class=""mt-4">
+    </div class="card p-4 mb-4">
+        <h1 class="title">{{ title }}</h1>
+        <h2 class="subtitle">Question</h2>
+        Question: {{ qtext }}
 
-    <div class = "descriptives">
-    <h2 class="subtitle">Descriptives</h2>
-        {{ descrip|safe }}
+        <div class = "card p-4 mb-4">
+        <h2 class="text-success">Descriptives</h2>
+            {{ descrip|safe }}
     </div>
 
-    <div class = "value counts">
-    <h2 class="subtitle">Value Counts</h2>
+    <div class="card p-3 mb-4">
+    <h2 class="text-warning">Value Counts</h2>
         {{ value_counts|safe }}
     </div>
 
-    <div class = "chart">
-    <h2 class="subtitle">Chart</h2>
-    <img src="{{ chart }}" alt="Count Plot {{ title }}">
+    <div class = "card p-3 mb-4 text-center">
+        <h2 class="text-warning mb-2">Chart</h2>
+        <img src="{{ chart }}" alt="Count Plot {{ title }}" class="img-fluid rounded">
     </div>
-
-{% endblock %}
+</div>
+{% endblock %}s
